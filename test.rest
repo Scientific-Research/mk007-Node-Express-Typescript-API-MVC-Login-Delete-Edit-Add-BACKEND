@@ -1,0 +1,10 @@
+@url = http://localhost:8000
+
+### base route 
+GET {{url}}
+
+### jobs
+GET {{url}}/jobs
+
+### delete a job
+DELETE {{url}}/jobs/1
