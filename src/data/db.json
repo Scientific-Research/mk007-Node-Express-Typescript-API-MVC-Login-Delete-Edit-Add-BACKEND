@@ -1,32 +1,6 @@
 {
   "jobs": [
-    {
-      "id": 1,
-      "title": "Frontend Developer",
-      "company": "PwC Deutschland",
-      "url": "https://www.get-in-it.de/jobsuche/p172318?filter[thematic_priority]=5&filter[city][radius]=25&filter[city][city][0][lon]=13.41053&filter[city][city][0][lat]=52.52437&start=0&limit=39&ref=Jobsuche",
-      "description": "Frontend-Entwicklung - Unser Produkt ist zentraler Bestandteil der Digitalisierungsstrategie von PwC Deutschland. Unsere Lösungen sollen komplexe Probleme einfach machen, dafür brauchen wir intuitive und moderne Frontends - und die baust du! Du bist zentrale:r Ansprechpartner:in für die Frontend Entwicklung eines wichtigen internationalen Prüfungstools in einem agilen Team der Digital Factory. Du konzipierst Responsive Web-Apps mit JavaScript /TypeScript und Angular und entwickelst diese weiter. Du kannst schnell UI-Prototypen aufsetzen, aber auch robuste, skalierbare Frontends im Angular Framework für unser Tool implementieren.\n\nFachliche Expertise - Du hast bereits Erfahrung in der Entwicklung von Web Applikationen mit HTML, CSS und JavaScript/TypeScript. Moderne UI Frameworks (Angular) hast du bereits erfolgreich eingesetzt, idealerweise hast du auch schon Erfahrung mit WebSocket.\n\nAgile Mindset - Du lebst und liebst Frontend-Technologien und entwickelst so kontinuierlich Produkt, Prozesse und Zusammenarbeit weiter.\n\nTeamwork - Unsere Teams sind cross-funktional. Du arbeitest Hand in Hand mit anderen Entwickler:innen, Automation Engineers und UX Kolleg:innen an der gemeinsamen Produktvision.\n\nArbeite wie es zu deinem Leben passt: mit FlexWork. Keine fixen Home-Office-Tage, sondern deine Chance Arbeitszeit und -ort variabel zu gestalten.\nDein Profil\n\nDu verfügst über ein abgeschlossenes Studium im Bereich Informatik oder eine vergleichbare Ausbildung und bringst Berufserfahrung im IT Umfeld, insbesondere im Frontend-Bereich, mit.\n\nDu hast ein grundlegendes Verständnis von Build-Prozessen, CI/ CD, Testing. Die Testautomatisierung im Frontend-Bereich ist für dich kein Neuland.\n\nDu hast idealerweise auch Erfahrungen im User Tracking mit Hotjar oder Piwik.\n\nDu suchst ein agiles Umfeld, in dem du deine Stärken ausspielen kannst.\n\nSehr gute Deutsch- und Englischkenntnisse helfen dir dabei, deine Ideen auch im internationalen Kontext oder mit internationalen Teamkolleg:innen zu teilen.",
-      "skillList": "angular, cicd, testing, hotjar, piwik",
-      "todo": "2022-12-07 send application"
-    },
-    {
-      "id": 2,
-      "title": "Frontend-Entwickler",
-      "company": "networker, solutions",
-      "url": "https://www.get-in-it.de/jobsuche/p197373?filter[thematic_priority]=5&filter[city][radius]=25&filter[city][city][0][lon]=13.41053&filter[city][city][0][lat]=52.52437&start=0&limit=39&ref=Jobsuche",
-      "description": "Deine Aufgaben bei uns\n\n    Entwicklung von Frontend und UI-Komponenten\n    Betreuung und Weiterentwicklung bestehender Systeme\n    Zusammenarbeit mit anderen Dienstleistern an gemeinsamen Kundenprojekten\n    Umsetzung eigener Webentwicklung gemeinsam mit den Teams\n\nDeine Kompetenzen\n\n    JavaScript, Type Script\n    HTML + CSS\n    React\n    Jest Testing\n    RESTful APIs + Swagger\n    Git, Gitlab\n    Webstorm\n    NestJs\n    UX-Design",
-      "skillList": "typescript, react, jest, rest, swagger, git, gitlab, webstorm, nestjs, ux",
-      "todo": "2022-12-08 send application"
-    },
-    {
-      "id": 3,
-      "title": "Web Frontend Entwickler",
-      "company": "EPI development",
-      "url": "https://www.get-in-it.de/jobsuche/p132078?filter[thematic_priority]=5&filter[city][radius]=25&filter[city][city][0][lon]=13.41053&filter[city][city][0][lat]=52.52437&start=0&limit=39&ref=Jobsuche",
-      "description": "Die Herausforderung\n\n    Erstellung einer Bedarfsanalyse für neue Funktionen mit einer selbsterklärenden UI Gestaltung\n    Entwickeln von Funktionen und Algorithmen die nachhaltig lesbar sind\n    Der Fokus liegt in der Vereinfachung komplexer Vorgänge\n\nDeine Aufgaben\n\n    Weiterentwicklung von epirent aufgrund von aktuellen Anforderungen\n    Im Team Lösungen für neue Funktionen erarbeiten\n    Erstellen von gut bedienbaren und ausgeklügelten UI, denke wie ein Anwender\n    Kommunikation im Team, einbringen eigener Ideen\n    Offener Umgang mit neuen Technologien\n    Kreativität ist gefragt\n\nDeine Fähigkeiten\n\n    Weitreichende Erfahrungen in der Anwendungsprogrammierung\n    Klare und selbsterklärende UI Designs erstellen\n    Komplizierte technische Zusammenhänge auf einfache Funktionen herunterbrechen\n    Kommunikativ im Team, zielorientiert und selbständig in der Arbeitsorganisation\n    Deine Sprachkenntnisse (optimal): JavaScript, CSS, HTML, Bootstrap, AngularJS, API Entwicklung (REST), Responsive Design / Progressive Apps\n    Kein Hochschulabschluss notwendig, Können zählt!",
-      "skillList": "angular, bootstrap, rest, responsive, pwa",
-      "todo": "2022-12-09 send application"
-    }
+
   ],
   "skillInfos": [
     {
