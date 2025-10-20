@@ -18,7 +18,6 @@ const jobs = JSON.parse(await fs.readFile('./dist/data/jobs.json', 'utf-8'));
 // prettier-ignore
 // import skillInfos from './data/skillInfos.json' with { type: 'json' };
 
-import fs from 'fs/promises';
 import path from 'path';
 
 import { join, dirname } from 'path';
@@ -258,5 +257,17 @@ export const deleteJob = async (id: number) => {
 };
 
 export const saveEditedJob = async (editedJob: IEditedJob) => {
-  
+  const job = db.data.jobs.find((j) => j.id === editedJob.id);
+
+  if (job !== undefined) {
+    job.title = editedJob.title;
+    job.company = editedJob.company;
+    job.url = editedJob.url;
+    job.description = editedJob.description;
+    job.skillList = editedJob.skillList;
+    job.todo = editedJob.todo;
+
+    await db.write();
+    return job;
+  }
 };
