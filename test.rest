@@ -8,3 +8,17 @@ GET {{url}}/jobs
 
 ### delete a job
 DELETE {{url}}/jobs/1
+
+### save an edited job
+PATCH {{url}}/job
+content-type: application/json
+ 
+{
+    "id": 2,
+    "title": "PPPP",
+    "company": "ccc",
+    "url": "uuu",
+    "description": "ddd",
+    "skillList": "sss",
+    "todo": "ttt"
+}
