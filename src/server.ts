@@ -13,10 +13,14 @@ import {
   getTotaledSkills,
   getTest,
   deleteJob,
+  saveEditedJob,
 } from './model.js';
+
+import { IEditedJob, IJobs, IRawJob } from './interface.js';
 
 const app = express();
 app.use(cors()); // erlaubt alle Origins
+app.use(express.json());
 
 // oder spezifisch:
 // app.use(cors({ origin: 'http://localhost:5173' }));
@@ -92,6 +96,24 @@ app.delete('/jobs/:id', async (req: express.Request, res: express.Response) => {
   }
   // const nextId = id + 1;
   // res.send(`delete this job with id: ${id} and next id would be: ${nextId}`);
+});
+
+app.patch('/job', async (req: express.Request, res: express.Response) => {
+  const editedJob: IEditedJob = req.body;
+  // The following Code will not work - we have to use try-catch():
+  // const job = await saveEditedJob(editedJob);
+  // if (job) {
+  //   res.status(200).send('ok');
+  // } else {
+  //   res.status(500).send('job did not save');
+  // }
+
+  try {
+    await saveEditedJob(editedJob);
+    res.status(200).send('ok');
+  } catch (error) {
+    res.status(500).send('job did not save');
+  }
 });
 
 app.listen(port, () => {

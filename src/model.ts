@@ -27,6 +27,7 @@ import { Low } from 'lowdb';
 import { JSONFile } from 'lowdb/node';
 
 import {
+  IEditedJob,
   IJobs,
   IRawJob,
   ISkillInfos,
@@ -254,4 +255,8 @@ export const deleteJob = async (id: number) => {
 
   // send back the one which we want to delete(when is not available => undefined) to the deleteJob function in server.ts
   return deletedObject;
+};
+
+export const saveEditedJob = async (editedJob: IEditedJob) => {
+  
 };

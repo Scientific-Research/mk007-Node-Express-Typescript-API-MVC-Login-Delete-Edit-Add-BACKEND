@@ -38,3 +38,13 @@ export interface TotaledSkill {
   skill: ISkillInfos;
   total: number;
 }
+
+export interface IEditedJob {
+  id: number;
+  title: string;
+  company: string;
+  url: string;
+  description: string;
+  skillList: string;
+  todo: string;
+}
