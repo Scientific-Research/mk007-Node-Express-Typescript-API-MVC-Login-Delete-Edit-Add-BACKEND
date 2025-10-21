@@ -34,6 +34,8 @@ import {
   TotaledSkill,
 } from './interface.js';
 
+import { getNextId } from './tools.js';
+
 interface DataSchema {
   // test: string;
   jobs: IRawJob[];
@@ -270,4 +272,18 @@ export const saveEditedJob = async (editedJob: IEditedJob) => {
     await db.write();
     return job;
   }
+};
+
+export const saveAddedJob = async (addedJob: IEditedJob) => {
+  const totalBefore = db.data.jobs.length;
+
+  addedJob.id = getNextId(db.data.jobs);
+
+  db.data.jobs.push(addedJob);
+
+  await db.write();
+
+  const totalAfter = db.data.jobs.length;
+
+  return totalAfter === totalBefore + 1;
 };

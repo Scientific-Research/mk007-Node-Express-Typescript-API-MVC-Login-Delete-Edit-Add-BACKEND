@@ -14,6 +14,7 @@ import {
   getTest,
   deleteJob,
   saveEditedJob,
+  saveAddedJob,
 } from './model.js';
 
 import { IEditedJob, IJobs, IRawJob } from './interface.js';
@@ -113,6 +114,25 @@ app.patch('/job', async (req: express.Request, res: express.Response) => {
     res.status(200).send('ok');
   } catch (error) {
     res.status(500).send('job did not save');
+  }
+});
+
+app.post('/job', async (req: express.Request, res: express.Response) => {
+  const addedJob: IEditedJob = req.body.job;
+  const pin: string = req.body.pin;
+  if (pin !== process.env.BACKEND_PIN) {
+    res.status(401).send({
+      error: true,
+      statusIdCode: 'badPin',
+      message: `Bad pin.`,
+    });
+  } else {
+    const success = await saveAddedJob(addedJob);
+    if (success) {
+      res.status(200).send('ok');
+    } else {
+      res.status(500).send('job did not save');
+    }
   }
 });
 
