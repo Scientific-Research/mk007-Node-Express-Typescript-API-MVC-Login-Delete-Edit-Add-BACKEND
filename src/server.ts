@@ -118,7 +118,9 @@ app.delete('/jobs/:id', async (req: express.Request, res: express.Response) => {
 });
 
 app.patch('/job', async (req: express.Request, res: express.Response) => {
-  const editedJob: IEditedJob = req.body;
+  const editedJob: IEditedJob = req.body.job;
+  const pin: string = req.body.pin;
+
   // The following Code will not work - we have to use try-catch():
   // const job = await saveEditedJob(editedJob);
   // if (job) {
@@ -128,10 +130,17 @@ app.patch('/job', async (req: express.Request, res: express.Response) => {
   // }
 
   try {
-    await saveEditedJob(editedJob);
-    res.status(200).send('ok');
+    if (pin === loginPin) {
+      await saveEditedJob(editedJob);
+      res.status(200).send('ok');
+    }
   } catch (error) {
-    res.status(500).send('job did not save');
+    res.status(401).send({
+      error: true,
+      statusIdCode: 'badPin',
+      message: `Bad pin.`,
+    }),
+      res.status(500).send('job did not save');
   }
 });
 
