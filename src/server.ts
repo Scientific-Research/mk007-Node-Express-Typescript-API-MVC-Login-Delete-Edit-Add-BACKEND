@@ -4,8 +4,14 @@
 // import http from 'http';
 import express from 'express';
 import cors from 'cors';
+import dotenv from 'dotenv';
+import requestIp from 'request-ip';
+
+dotenv.config();
+
 // import { IncomingMessage, ServerResponse } from 'http';
 // import { generateMainContent } from './content';
+
 import {
   getApiInstructionsHtml,
   getJobs,
@@ -26,7 +32,8 @@ app.use(express.json());
 // oder spezifisch:
 // app.use(cors({ origin: 'http://localhost:5173' }));
 
-const port = 8000;
+// const port = 8000;
+const port = process.env.PORT;
 
 // const jobs = fs.readFileSync('./src/data/jobs.json', 'utf-8'); // in JSON Format => we can not use it => we have to use JSON.parse and then use it like following:
 
@@ -135,6 +142,23 @@ app.post('/job', async (req: express.Request, res: express.Response) => {
     }
   }
 });
+
+app.post(
+  '/identify-as-admin',
+  (req: express.Request, res: express.Response) => {
+    const pin = req.body.pin;
+    console.log(pin);
+    if (pin !== process.env.PIN) {
+      res.status(401).send({
+        error: true,
+        statusIdCode: 'badPin',
+        message: `Bad pin.`,
+      });
+    } else {
+      res.status(200).send('ok');
+    }
+  }
+);
 
 app.listen(port, () => {
   console.log(`listening on http://localhost:${port}`);
